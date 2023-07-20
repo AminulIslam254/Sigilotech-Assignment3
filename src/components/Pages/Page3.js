@@ -2,12 +2,40 @@ import { Checkbox } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addOnsSetup } from '../../redux/actions/ProductActions';
+import { makeStyles } from '@material-ui/core';
+
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& .MuiTextField-root': {
+      margin: theme.spacing(1),
+      width: '25ch',
+    },
+  },
+  '@media (min-width: 780px)': {
+    width: '80%'
+  },
+  mainBox1:{
+    '@media (max-width: 780px)': {
+      width: '110% !important'
+    },
+  }
+  
+
+
+}));
+
+
+
 
 const Page3 = () => {
 
   //redux part
   const products = useSelector((state) => state);
   const dispatch = useDispatch();
+
+  const classes=makeStyles();
 
   const [yearlyToggle, setYearlyToggle] = useState("");
 
@@ -47,7 +75,7 @@ const Page3 = () => {
         <h1 style={{ margin: 0, marginBottom: 10 }}>Pick add-ons</h1>
         <span style={{ color: "grey" }}>Add-ons help enhance your gaming experience</span>
       </div>
-      <div style={{ marginTop: 15, height: "20%", width: "95%" }}>
+      <div className={classes.mainBox1} style={{ marginTop: 15, height: "20%", width: "95%" }}>
 
         <div style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
           <div style={{ width: "85%", display: "flex", alignItems: "center", flexDirection: "row",justifyContent:"space-between" }}>
