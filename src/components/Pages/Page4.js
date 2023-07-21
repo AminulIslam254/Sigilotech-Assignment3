@@ -15,13 +15,19 @@ const Page4 = () => {
 
 
   useEffect(() => {
+    let myPrice=0;
     storeData && storeData.addOns.map((val,ind)=>{
+      console.log("mone : ",val.money,ind)
       if(val.money!==undefined){
-        setAddOnsTotalPrice(addOnsTotalPrice+parseInt(val.money));
+        myPrice+=parseInt(val.money);
       }
     })
+    setAddOnsTotalPrice(myPrice);
     
   }, [storeData])
+  
+
+  
   
 
 

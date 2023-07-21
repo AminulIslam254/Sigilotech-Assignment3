@@ -18,8 +18,18 @@ const useStyles = makeStyles((theme) => ({
   },
   mainBox1:{
     '@media (max-width: 780px)': {
-      width: '110% !important'
-    },
+      width:"120% !important"
+   }
+  },
+  textDiv1:{
+    '@media (max-width: 780px)': {
+      width:"80% !important"
+   }
+  },
+  checkBoxDiv1:{
+    '@media (max-width: 780px)': {
+      width:"74% !important"
+   }
   }
   
 
@@ -35,7 +45,7 @@ const Page3 = () => {
   const products = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const classes=makeStyles();
+  const classes=useStyles();
 
   const [yearlyToggle, setYearlyToggle] = useState("");
 
@@ -75,13 +85,13 @@ const Page3 = () => {
         <h1 style={{ margin: 0, marginBottom: 10 }}>Pick add-ons</h1>
         <span style={{ color: "grey" }}>Add-ons help enhance your gaming experience</span>
       </div>
-      <div className={classes.mainBox1} style={{ marginTop: 15, height: "20%", width: "95%" }}>
+      <div   style={{ marginTop: 15, height: "20%", width: "95%" }}>
 
-        <div style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
+        <div className={classes.mainBox1} style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
           <div style={{ width: "85%", display: "flex", alignItems: "center", flexDirection: "row",justifyContent:"space-between" }}>
-            <div style={{ width: "54%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "space-between", height: "100%" }}>
+            <div className={classes.checkBoxDiv1} style={{ width: "54%",  display: "flex", flexDirection: "row", justifyContent: "space-between", height: "100%" }}>
               <Checkbox id='1' onChange={onCheckChange} />
-              <div style={{ height: "62%", display: "flex", flexDirection: "column", justifyContent: "space-between", marginTop: 9 }}>
+              <div className={classes.textDiv1} style={{ height: "62%", display: "flex", flexDirection: "column", justifyContent: "space-between", marginTop: 9 }}>
                 <p style={{ fontSize: 13, fontWeight: "bold", margin: 0 }}>Online Service</p>
                 <p style={{ fontSize: 12, color: "gray", margin: 0 }}>Access to multiplayer games</p>
               </div>
@@ -98,11 +108,11 @@ const Page3 = () => {
       </div>
       <div style={{ marginTop: 15, height: "20%", width: "95%" }}>
 
-        <div style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
+        <div className={classes.mainBox1} style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
           <div style={{ width: "85%", display: "flex", alignItems: "center", flexDirection: "row",justifyContent:"space-between" }}>
-            <div style={{ width: "46%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "space-between", height: "100%" }}>
+            <div className={classes.checkBoxDiv1} style={{ width: "46%",  display: "flex", flexDirection: "row", justifyContent: "space-between", height: "100%" }}>
               <Checkbox id='2' onChange={onCheckChange} />
-              <div style={{ height: "62%", display: "flex", flexDirection: "column", justifyContent: "space-between", marginTop: 9 }}>
+              <div className={classes.textDiv1} style={{ height: "62%", display: "flex", flexDirection: "column", justifyContent: "space-between", marginTop: 9 }}>
                 <p style={{ fontSize: 13, fontWeight: "bold", margin: 0 }}>Larger Storage</p>
                 <p style={{ fontSize: 12, color: "gray", margin: 0 }}>Extra 1TB of cloud save</p>
               </div>
@@ -119,11 +129,11 @@ const Page3 = () => {
       </div>
       <div style={{ marginTop: 15, height: "20%", width: "95%" }}>
 
-        <div style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
+        <div className={classes.mainBox1} style={{ height: "75%", width: "95%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "center", borderRadius: 5 }}>
           <div style={{ width: "85%", display: "flex", alignItems: "center", flexDirection: "row",justifyContent:"space-between" }}>
-            <div style={{ width: "56%", border: "1px solid", display: "flex", flexDirection: "row", justifyContent: "space-between", height: "100%" }}>
+            <div className={classes.checkBoxDiv1} style={{ width: "56%",  display: "flex", flexDirection: "row", justifyContent: "space-between", height: "100%" }}>
               <Checkbox id='3' onChange={onCheckChange} />
-              <div style={{ height: "62%", display: "flex", flexDirection: "column", justifyContent: "space-between", marginTop: 9 }}>
+              <div className={classes.textDiv1} style={{ height: "62%", display: "flex", flexDirection: "column", justifyContent: "space-between", marginTop: 9 }}>
                 <p style={{ fontSize: 13, fontWeight: "bold", margin: 0 }}>Customizable profile</p>
                 <p style={{ fontSize: 12, color: "gray", margin: 0 }}>Custom theme on your profile</p>
               </div>

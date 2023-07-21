@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
     leftImgMainBox1div1:{
         '@media (max-width: 780px)': {
-            width:"80% !important",
+            width:"86% !important",
             // height:"22% !important"
          },
     },
@@ -114,13 +114,13 @@ const Home = () => {
 
     return (
         <>
-            <div className={classes.box1} style={{ height: 636, width: "100%", display: "flex", justifyContent: "center", alignItems: "center", border: "2px solid blue", backgroundColor: "#f3eee9" }}>
+            <div className={classes.box1} style={{ height: 636, width: "100%", display: "flex", justifyContent: "center", alignItems: "center",  backgroundColor: "#f3eee9" }}>
 
-                <div className={classes.leftImgMainBox1} style={{ border: "2px solid black", height: "70%", width: "57%", backgroundColor: "white", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div className={classes.leftImgMainBox1} style={{  height: "70%", width: "57%", backgroundColor: "rgb(243, 238, 233)", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
                     <div className={classes.box1} style={{ height: "95%", width: "95%", display: "flex", flexDirection: "row" }}>
                         <div className={classes.leftImgMainBox1div1}  style={{ height: "99%", width: "30%", backgroundImage: `url(${leftImage})`, border: "2px solid green", borderRadius: 5, backgroundSize: "cover" }}>
-                            <div className={classes.box1Div1Div1} style={{ height: "70%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-evenly", border: "1px solid" }}>
+                            <div className={classes.box1Div1Div1} style={{ height: "70%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-evenly", }}>
                                 <div style={{ height: "25%", width: "59%", display: "flex", flexDirection: "row",  alignItems: "center",justifyContent:"space-around" }}>
                                     <div style={{
                                         borderRadius: 25, border: `1px solid ${(pageNo === 0) ? "transparent" : "white"}`, height: 30, width: 30, display: "flex",
